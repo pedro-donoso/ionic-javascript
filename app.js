@@ -44,7 +44,7 @@ buttonSave.addEventListener('click', () => {
 
   createNewProduct(name, price);
   total = total + parseFloat(price);
-  totalOutput.textContent = total.toFixed(2);
+  totalOutput.textContent = total;
   clearInputs();
 
 })
