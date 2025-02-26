@@ -35,9 +35,9 @@ buttonSave.addEventListener('click', () => {
   const price = productPrice.value;
 
   if (isEmpty(name) || isEmpty(price)) {
-  console.log('Datos no válidos');
-  return;
-}
+    presentAlert();
+    return;
+  }
 
   createNewProduct(name, price);
   clearInputs();
