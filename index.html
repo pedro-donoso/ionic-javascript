@@ -1,84 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>Ionic App</title>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link href="css/style.css" rel="stylesheet" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/@ionic/core/css/ionic.bundle.css"
-    />
-  </head>
-
-  <body>
-    <ion-app>
-      <ion-header>
-        <ion-toolbar color="primary">
-          <ion-title>Productos</ion-title>
-          <ion-buttons slot="end">
-            <ion-button>
-              <ion-icon name="cart"></ion-icon>
-              <p style="margin-left: 0.5rem">$
-                <span id="total">0</span>
-              </p>
-
-            </ion-button>
-          </ion-buttons>
-        </ion-toolbar>
-      </ion-header>
-      <ion-content>
-        <ion-grid>
-          <ion-row>
-            <ion-col size="12">
-              <ion-list id="product-list"></ion-list>
-            </ion-col>
-          </ion-row>
-
-          <ion-row>
-            <ion-col size="12">
-              <ion-card color="warning">
-                <ion-card-header color="secondary">
-                  <ion-card-title> Lista de Compras </ion-card-title>
-                </ion-card-header>
-
-                <ion-card-content>
-                  <ion-item class="ion-margin-vertical">
-                    <ion-label>Producto: </ion-label>
-
-                    <ion-input type="text" id="productName" placeholder="Ingresa nombre" style="margin-left: 3px"></ion-input>
-                  </ion-item>
-
-                  <ion-item class="ion-margin-vertical">
-                    <ion-label>Precio: </ion-label>
-
-
-
-                    <ion-input type="number" id="productPrice" placeholder="Sólo números" style="margin-left: 3px"></ion-input>
-                  </ion-item>
-
-                  <ion-button color="success" id="button-save">
-                    <ion-icon name="add-circle" slot="start"></ion-icon>Agregar
-                  </ion-button>
-
-                  <ion-button color="danger" fill="outline" id="button-cancel">
-                    <ion-icon name="trash" slot="start"></ion-icon>Limpiar
-                  </ion-button>
-                </ion-card-content>
-              </ion-card>
-            </ion-col>
-          </ion-row>
-        </ion-grid>
-      </ion-content>
-    </ion-app>
-    <script
-      type="module"
-      src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"
-    ></script>
-    <script
-      nomodule
-      src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"
-    ></script>
-    <script src="./app.js"></script>
-  </body>
+<head>
+  <title>Ionic App</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="css/style.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core/css/ionic.bundle.css" />
+</head>
+<body>
+  <ion-app>
+    <ion-header>
+      <ion-toolbar color="primary">
+        <ion-title>Productos</ion-title>
+        <ion-buttons slot="end">
+          <ion-button>
+            <ion-icon name="cart"></ion-icon>
+            <p style="margin-left: 0.5rem">$
+              <span id="total">0</span>
+            </p>
+          </ion-button>
+        </ion-buttons>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+      <ion-grid>
+        <ion-row>
+          <ion-col size="12">
+            <ion-list id="product-list"></ion-list>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col size="12">
+            <ion-card color="warning">
+              <ion-card-header color="secondary">
+                <ion-card-title> Lista de Compras </ion-card-title>
+              </ion-card-header>
+              <ion-card-content>
+                <ion-item class="ion-margin-vertical">
+                  <ion-label>Producto: </ion-label>
+                  <ion-input type="text" id="productName" placeholder="Ingresa nombre" style="margin-left: 3px">
+                  </ion-input>
+                </ion-item>
+                <ion-item class="ion-margin-vertical">
+                  <ion-label>Precio: </ion-label>
+                  <ion-input type="number" id="productPrice" placeholder="Sólo números" style="margin-left: 3px">
+                  </ion-input>
+                </ion-item>
+                <ion-button color="success" id="button-save">
+                  <ion-icon name="add-circle" slot="start"></ion-icon>Agregar
+                </ion-button>
+                <ion-button color="danger" fill="outline" id="button-cancel">
+                  <ion-icon name="trash" slot="start"></ion-icon>Limpiar
+                </ion-button>
+              </ion-card-content>
+            </ion-card>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-content>
+  </ion-app>
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"></script>
+  <script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"></script>
+  <script src="./app.js"></script>
+</body>
 </html>
