@@ -3,6 +3,9 @@ const productPrice = document.querySelector('#productPrice');
 const buttonSave = document.querySelector('#button-save');
 const buttonCancel = document.querySelector('#button-cancel');
 const productList = document.querySelector('#product-list');
+const totalOutput = document.querySelector('#total');
+
+let total = 0;
 
 const createNewProduct = (name, price) => {
   const ionCard = document.createElement('ion-card');
@@ -40,6 +43,8 @@ buttonSave.addEventListener('click', () => {
   }
 
   createNewProduct(name, price);
+  total = total + parseFloat(price);
+  totalOutput.textContent = total.toFixed(2);
   clearInputs();
 
 })
