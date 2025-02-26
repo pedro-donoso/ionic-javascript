@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <title>Ionic App</title>
   <meta charset="UTF-8" />
@@ -7,6 +8,7 @@
   <link rel="stylesheet" href="styles.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core/css/ionic.bundle.css" />
 </head>
+
 <body>
   <ion-app>
     <ion-header>
@@ -15,8 +17,8 @@
         <ion-buttons slot="end">
           <ion-button>
             <ion-icon name="cart"></ion-icon>
-            <p style="margin-left: 0.5rem">$
-              <span id="total">0</span>
+            <p class="total-price">
+              $<span id="total">0</span>
             </p>
           </ion-button>
         </ion-buttons>
@@ -25,25 +27,20 @@
     <ion-content>
       <ion-grid>
         <ion-row>
-          <ion-col size="12">
-            <ion-list id="product-list"></ion-list>
-          </ion-col>
-        </ion-row>
-        <ion-row>
-          <ion-col size="12">
+          <ion-col size-md="6" size-lg="6">
+            <!-- Columna para el formulario -->
             <ion-card color="warning">
               <ion-card-header color="secondary">
-                <ion-card-title style=color:white>Nuevo Producto</ion-card-title>
+                <ion-card-title class="card-title">Nuevo Producto</ion-card-title>
               </ion-card-header>
               <ion-card-content>
                 <ion-item class="ion-margin-vertical">
                   <ion-label>Producto: </ion-label>
-                  <ion-input type="text" id="productName" placeholder="Ingresa nombre" style="margin-left: 3px">
-                  </ion-input>
+                  <ion-input type="text" id="productName" placeholder="Ingresa nombre" class="input-margin"></ion-input>
                 </ion-item>
                 <ion-item class="ion-margin-vertical">
                   <ion-label>Precio: </ion-label>
-                  <ion-input type="number" id="productPrice" placeholder="Sólo números" style="margin-left: 3px">
+                  <ion-input type="number" id="productPrice" placeholder="Sólo números" class="input-margin">
                   </ion-input>
                 </ion-item>
                 <ion-button color="success" id="button-save">
@@ -55,6 +52,10 @@
               </ion-card-content>
             </ion-card>
           </ion-col>
+          <ion-col size-md="6" size-lg="6">
+            <!-- Columna para la lista de productos -->
+            <ion-list id="product-list"></ion-list>
+          </ion-col>
         </ion-row>
       </ion-grid>
     </ion-content>
@@ -63,4 +64,5 @@
   <script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"></script>
   <script src="./app.js"></script>
 </body>
+
 </html>
