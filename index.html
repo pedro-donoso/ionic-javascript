@@ -14,7 +14,7 @@
 
   <ion-app>
     <ion-header>
-      <ion-toolbar>
+      <ion-toolbar color="primary">
         <ion-buttons slot="start">
           <ion-button>
             <ion-icon name="logo-ionic"></ion-icon>
@@ -34,8 +34,8 @@
       <ion-grid>
         <ion-row>
           <ion-col>
-            <ion-card>
-              <ion-card-header>
+            <ion-card color="warning">
+              <ion-card-header color="secondary">
                 <ion-card-title>
                   New Product
                 </ion-card-title>
@@ -45,17 +45,17 @@
                   <ion-label position="floating">
                     Product Name
                   </ion-label>
-                  <ion-input type="text"></ion-input>
+                  <ion-input type="text" id="productName"></ion-input>
                 </ion-item>
                       <ion-item>
                   <ion-label position="floating">
                     Product Price
                   </ion-label>
-                  <ion-input type="number"></ion-input>
+                  <ion-input type="number" id="productPrice"></ion-input>
                 </ion-item>
-                <ion-button color="success">
+                <ion-button color="success" id="button-save">
                   <ion-icon name="add-circle" slot="start"></ion-icon>Save
-                </ion-button>
+                </ion-button id="button-cancel">
                 <ion-button color="danger" fill="outline">
                   <ion-icon name="trash" slot="start"></ion-icon>Clear
                 </ion-button>
