@@ -15,8 +15,9 @@
       <ion-toolbar color="primary">
         <ion-title>Lista de Compras</ion-title>
         <ion-buttons slot="end">
-          <ion-button>
             <ion-icon name="cart"></ion-icon>
+          <ion-button>
+            Total:
             <p class="total-price">
               $<span id="total">0</span>
             </p>
@@ -27,10 +28,10 @@
     <ion-content>
       <ion-grid>
         <ion-row>
-          <ion-col size-md="6" size-lg="6">
+          <ion-col size-md="6" size-lg="6" size-xs="12">
             <!-- Columna para el formulario -->
             <ion-card color="warning">
-              <ion-card-header color="secondary">
+              <ion-card-header color="primary" style="color: #f8f9fa;">
                 <ion-card-title class="card-title">Nuevo Producto</ion-card-title>
               </ion-card-header>
               <ion-card-content>
@@ -52,9 +53,16 @@
               </ion-card-content>
             </ion-card>
           </ion-col>
-          <ion-col size-md="6" size-lg="6">
+          <ion-col size-md="6" size-lg="6" size-xs="12">
             <!-- Columna para la lista de productos -->
+            <ion-card>
+              <ion-card-header color="tertiary">
+                <ion-card-title class="card-title">Productos Agregados</ion-card-title>
+              </ion-card-header>
+
             <ion-list id="product-list"></ion-list>
+
+            </ion-card>
           </ion-col>
         </ion-row>
       </ion-grid>
