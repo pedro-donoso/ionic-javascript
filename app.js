@@ -12,9 +12,36 @@ const createNewProduct = (name, price) => {
   productList.appendChild(ionCard);
 }
 
+const clearInputs = () => {
+  productName.value = '';
+  productPrice.value = '';
+}
+
+const presentAlert = () => {
+  const alert = document.createElement('ion-alert');
+  alert.header = 'Datos no válidos';
+  alert.subHeader = 'Por favor, complete los datos';
+  alert.message = 'Nombre o Precio vacíos';
+  alert.buttons = ['OK'];
+
+  document.body.appendChild(alert);
+  return alert.present();
+}
+
+const isEmpty = str => !str.trim().length;
+
 buttonSave.addEventListener('click', () => {
   const name = productName.value;
   const price = productPrice.value;
+
+  if (isEmpty(name) || isEmpty(price)) {
+  console.log('Datos no válidos');
+  return;
+}
+
   createNewProduct(name, price);
+  clearInputs();
 
 })
+
+buttonCancel.addEventListener('click', clearInputs);
