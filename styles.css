@@ -1,0 +1,69 @@
+/* styles.css */
+
+/* Estilos generales */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa; /* Color de fondo suave */
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilos para el encabezado */
+ion-header {
+    background-color: #007bff; /* Color de fondo del encabezado */
+    color: white; /* Color del texto en el encabezado */
+}
+
+/* Estilos para el título de la tarjeta */
+.card-title {
+    color: white; /* Color del texto del título de la tarjeta */
+    font-size: 1.5rem; /* Tamaño de fuente del título */
+}
+
+/* Estilos para los inputs */
+.input-margin {
+    margin-left: 3px; /* Margen para los inputs */
+}
+
+/* Estilos para los botones */
+ion-button {
+    margin-top: 10px; /* Margen superior para los botones */
+}
+
+/* Estilos para el botón de agregar */
+#button-save {
+    background-color: #28a745; /* Color de fondo verde */
+    color: white; /* Color del texto */
+}
+
+/* Estilos para el botón de limpiar */
+#button-cancel {
+    background-color: #dc3545; /* Color de fondo rojo */
+    color: white; /* Color del texto */
+}
+
+/* Estilos para la lista de productos */
+#product-list {
+    margin-top: 20px; /* Margen superior para la lista */
+}
+
+/* Estilos para los elementos de la lista */
+ion-item {
+    background-color: #ffffff; /* Color de fondo blanco para los elementos de la lista */
+    border: 1px solid #dee2e6; /* Borde gris claro */
+    border-radius: 5px; /* Bordes redondeados */
+    margin-bottom: 10px; /* Margen inferior entre elementos */
+}
+
+/* Estilos para el total en el carrito */
+.total-price {
+    margin-left: 0.5rem;
+    font-weight: bold; /* Negrita para el total */
+}
+
+/* Estilos para el contenedor principal */
+.container {
+    max-width: 1200px; /* Ancho máximo del contenedor */
+    margin: 0 auto; /* Centrar el contenedor */
+    padding: 20px; /* Espaciado interno */
+}
